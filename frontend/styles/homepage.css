@@ -17,7 +17,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 40px;
+    width: 5px;
 }
   
 /* Track */
@@ -27,7 +27,9 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB);  
 }
 
 /* Handle on hover */
@@ -36,5 +38,22 @@
 }
 
 .tools{
-    margin: 2vw;
+    margin: 10px;
+}
+
+.tools-button{
+    margin-bottom: 10px;
+}
+
+.tools-img-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+}
+
+.total-project-progress-bar{
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); 
 }
