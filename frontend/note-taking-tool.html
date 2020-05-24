@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>PRA | Profile</title>
+        <title>PRA | Researcher's Diary</title>
         <!--INCLUDES-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
@@ -8,12 +8,23 @@
         <link rel="stylesheet" href="styles/project-dashboard.css">
         <link rel="stylesheet" href="styles/rolling-stats.css">
         <link rel="stylesheet" href="styles/user-homepage.css">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@615&display=swap" rel="stylesheet">
         <script src="scripts/rolling-stats.js"></script>
         <!--INCLUDES-->
         <style>
             html, body {
                 height: 95.6%;
                 margin: 0;
+            }
+            .diary-writing-area{
+                /*font-family: 'EB Garamond', serif;*/
+                font-size: 1.5em;
+                border-radius: 20px;
+                border-color: #158CBA;
+                border-width: 5px;
+            }
+            .diary-writing-area:focus{
+                outline: none !important;
             }
         </style>
     </head> 
@@ -41,18 +52,20 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ol class="breadcrumb" style="width: 100%;">
-                            <ol class="breadcrumb" style="width: 100%;">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#"></a></li>
-                            </ol>
+                            <li class="breadcrumb-item"><a href="user-homepage.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Project</a></li>
+                            <li class="breadcrumb-item"><a href="#">Researcher's Diary</a></li>
                         </ol>
                     </div>
                 </div>
             </div>
     
-            <center>
-                <br><br><br><br><br><br><br>
-                <h1 class="display-1">Specific Tool Opens Here!</h1>
+            <center class="paper-container">
+                <h2 class="display-4">Researcher's Diary</h2>
+                <br>
+                <textarea class="diary-writing-area" id="" cols="100" rows="10"></textarea>
+                <br><br>
+                <button type="button" class="btn btn-info btn-lg">&#9998; Save Note</button>
             </center>
         </div>
         <footer class="footer">
