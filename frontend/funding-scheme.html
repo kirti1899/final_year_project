@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>PRA | Funding Scheme</title>
+        <!--INCLUDES-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+        <link rel="stylesheet" href="styles/project-dashboard.css">
+        <link rel="stylesheet" href="styles/rolling-stats.css">
+        <link rel="stylesheet" href="styles/user-homepage.css">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@615&display=swap" rel="stylesheet">
+        <script src="scripts/rolling-stats.js"></script>
+        <!--INCLUDES-->
+        <style>
+            html, body {
+                height: 95.6%;
+                margin: 0;
+            }
+            .display-4{
+                margin-top: 25px;
+            }
+            .filter-parameter{
+                display: block;
+                margin: 3px;
+            }
+            .filter-parameter .btn-group .btn-secondary{
+                width: 15em;
+            }
+            .parameter-inst{
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            .col-md-2{
+                margin-top: 40px;
+            }
+            .col-md-10{
+                border:2px; 
+                border-radius: 7px;
+                border-style: inset; 
+                border-color: #158CBA;
+                height: 60%;
+            }
+            .col-md-10 center{
+                margin-top: 13em;
+            }
+            @media only screen and (max-width: 760px) {
+                .display-4{
+                    margin-top: 15px;
+                    font-size: 32px;
+                }
+                .filter-parameter .btn-group .btn-secondary{
+                    width: 15em;
+                    margin-left: 7px;
+                }
+                .col-md-2{
+                    margin-bottom: 10px;
+                }
+                .col-md-10 center{
+                    margin-top: 6.5em;
+                }
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="web-app-container wrapper">
+            <div class="header">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-md-12">
+                        <a class="navbar-brand" href="index.html">
+                            <h2><span class="badge badge-primary">PRA</span></h2>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarColor02">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item" style="float: right">
+                                    <a class="nav-link" href="index.html">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb" style="width: 100%;">
+                            <li class="breadcrumb-item"><a href="user-homepage.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Project</a></li>
+                            <li class="breadcrumb-item"><a href="#">Researcher Search Engines</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    
+            <center class="list-container">
+                <h2 class="display-4">Funding Schemes </h2>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="parameter-inst">Tell Us Something Basic Things & We’ll Find Relevant Research Funding Schemes for You.</p>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">Feild of Study</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">Amount Required</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">Reapplication</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">Highest Qualification</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">State</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-parameter">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-secondary">City</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <center>Appicable Schemes Appear Here!</center>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <footer class="footer">
+            <br><br><br>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="index.html"><small>Project By Team XYZ</small></a>
+            </nav>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

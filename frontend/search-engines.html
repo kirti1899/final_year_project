@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>PRA | Researcher's Diary</title>
+        <title>PRA | Research Search Engines</title>
         <!--INCLUDES-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
@@ -16,15 +16,38 @@
                 height: 95.6%;
                 margin: 0;
             }
-            .diary-writing-area{
-                /*font-family: 'EB Garamond', serif;*/
-                font-size: 1.5em;
-                border-radius: 20px;
-                border-color: #158CBA;
-                border-width: 5px;
+            .display-4{
+                margin-top: 25px;
             }
-            .diary-writing-area:focus{
-                outline: none !important;
+            .search-engine-item{
+                margin-bottom: 25px;
+            }
+            .search-engine-item img{
+                margin-right: -100px;
+                height: 2.6em;
+                width: 10em;
+            }
+            @media only screen and (max-width: 760px) {
+                .display-4{
+                    margin-top: 15px;
+                    font-size: 32px;
+                }
+                .search-engine-item{
+                    height: 60px;
+                    margin-bottom: 5px;
+                }
+                .search-engine-item img{
+                    float: left;
+                    position: relative;
+                    display: block;
+                    height: 2.6em;
+                    width: 10em;
+                }
+                .list-container button{
+                    position: relative;
+                    display: block;
+                    margin-right: -50px;
+                }
             }
         </style>
     </head> 
@@ -54,18 +77,37 @@
                         <ol class="breadcrumb" style="width: 100%;">
                             <li class="breadcrumb-item"><a href="user-homepage.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Project</a></li>
-                            <li class="breadcrumb-item"><a href="#">Researcher's Diary</a></li>
+                            <li class="breadcrumb-item"><a href="#">Researcher Search Engines</a></li>
                         </ol>
                     </div>
                 </div>
             </div>
     
-            <center class="paper-container">
-                <h2 class="display-4">Researcher's Diary</h2>
+            <center class="list-container">
+                <h2 class="display-4">Researcher Search Engines</h2>
                 <br>
-                <textarea class="diary-writing-area" id="" cols="100" rows="10"></textarea>
-                <br><br>
-                <button type="button" class="btn btn-info btn-lg">&#9998; Save Note</button>
+                <div class="container">
+                    <div class="alert alert-dismissible alert-secondary search-engine-item">
+                        <img src="images/google scholar.png" alt="">
+                        <button type="button" class="btn btn-primary" style="float:right">Direct Link &#8594;</button>
+                    </div>
+                    <div class="alert alert-dismissible alert-secondary search-engine-item">
+                        <img src="images/IEEE-XploreDigitalLibrary-removebg-preview.png" alt="">
+                        <button type="button" class="btn btn-primary" style="float:right">Direct Link &#8594;</button>
+                    </div>
+                    <div class="alert alert-dismissible alert-secondary search-engine-item">
+                        <img src="images/Springer-removebg-preview.png" alt="">
+                        <button type="button" class="btn btn-primary" style="float:right">Direct Link &#8594;</button>
+                    </div>
+                    <div class="alert alert-dismissible alert-secondary search-engine-item">
+                        <img src="images/asme-removebg-preview.png" alt="">
+                        <button type="button" class="btn btn-primary" style="float:right">Direct Link &#8594;</button>
+                    </div>
+                    <div class="alert alert-dismissible alert-secondary search-engine-item">
+                        <img src="images/sciencedirect-logo-vector-removebg-preview.png" alt="">
+                        <button type="button" class="btn btn-primary" style="float:right">Direct Link &#8594;</button>
+                    </div>
+                </div>
             </center>
         </div>
         <footer class="footer">
