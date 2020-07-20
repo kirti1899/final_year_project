@@ -1,8 +1,0 @@
-{% extends "layout.html" %}
-{% block content %}
-	{% for project in projects %}
-		<h1>{{ project.title}}</h1>
-		<p>By {{ project.author}} on {{ project.date_posted }}</p>
-		<p><a href="{{ project.reference }}">Click here for Reference Link</a></p>
-	{% endfor %}
-{% endblock content %}

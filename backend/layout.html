@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+		<title>Flask Blog - {{ title }}</title>
+	{% else %}
+		<title>Flask Blog</title>
+	{% endif %}
+</head>
+<body>
+	{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{%for category, message in messages %}
+				<div class="alert alert-{{ category }}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	{% block content %}{% endblock %}
+</body>
+</html>
