@@ -1,4 +1,52 @@
 {% extends "layout.html" %}
 {% block content %}
-	<h1>About Page</h1>
+    <center>
+        <h1 class="display-4">About Us</h1>
+        <br>
+        <div class="container">
+			<p>
+				This Product is being done as a final year project by Neel Patel, Kirti Gupta, Kylyn Fernandiz and Dhairya Shah under the guidance of Prof.(Mrs.) Lynette
+			R.D'mello. The main aim of the project is to provide researchers (as of now, in 1.0 version, it is restricted to technology based researchers) with small as well as medium scale tools.
+			</p>
+			<p>The Project is unique since it is a <i>Product-Based Project</i> rather than the majorly choosed <i>Research-Based Project</i>.</p>
+			<p>Currently the Project is using the following technology breakdown &#8594;</p>
+			
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#front-end">Front-End</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#back-end">Back-End</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#database">Database</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#third-party-apis">External APIs</a>
+				</li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active show" id="front-end">
+					<h4>HTML 5</h4>
+					<h4>CSS 3</h4>
+					<h4>JavaScript</h4>
+					<h4>Bootstrap 4</h4>
+				</div>
+				<div class="tab-pane fade" id="back-end">
+					<img 
+						src="{{ url_for('static', filename='images/back-end-tech.png') }}" 
+						alt="Python 3 | Flask"
+						style="border-radius: 10px; margin: 20px;"
+					>
+				</div>
+				<div class="tab-pane fade" id="database">
+					<img 
+						src="{{ url_for('static', filename='images/database-tech.jpg') }}" 
+						alt="Python 3 | MongoDB"
+						style="border-radius: 10px; margin: 20px;"
+					>
+				</div>
+			</div>
+		</div>
+    </center>
 {% endblock content %}
