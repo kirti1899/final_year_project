@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
 	<link rel="stylesheet" href="{{ url_for('static', filename='styles/project-dashboard.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='styles/rolling-stats.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<script src="{{ url_for('static', filename='scripts/rolling-stats.js') }}"></script>
 	{% if title %}
@@ -58,7 +59,7 @@
 		<div class="header">
 			<div class="row">
 				<nav class="navbar navbar-expand-lg navbar-dark bg-dark col-md-12">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{{ url_for('index') }}">
 						<h2><span class="badge badge-primary">PRA 1.0</span></h2>
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,8 +96,12 @@
 	</div>
 	<footer class="footer">
 		<br><br><br>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="index.html"><small>Project By Team XYZ</small></a>
+		<nav class="navbar justify-content-center bg-primary footer-navbar" >
+			<ul class="nav justify-content-center">
+				<li class="nav-item" style="margin-bottom: -5px">
+				  <a href="#" class="nav-link text-white">Developed in <img src="{{ url_for('static', filename='images/india2.png') }}" alt="IN" height="25px" width="25px" style="margin-bottom: 5px;"></a>
+				</li>
+			</ul>
 		</nav>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
